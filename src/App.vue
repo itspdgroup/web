@@ -33,18 +33,18 @@ const handleIntersection = (entries, observer) => {
 };
 
 onMounted(() => {
-  const options = {
-    threshold: 1, // Sesuaikan threshold sesuai kebutuhan
-  };
+  // const options = {
+  //   threshold: 1, // Sesuaikan threshold sesuai kebutuhan
+  // };
 
-  const observer = new IntersectionObserver(handleIntersection, options);
-  const judul = document.querySelector(".judul");
-  observer.observe(judul);
+  // const observer = new IntersectionObserver(handleIntersection, options);
+  // const judul = document.querySelector(".judul");
+  // observer.observe(judul);
 });
 </script>
 
 <template>
-  <navbarapp></navbarapp>
+  <!-- <navbarapp></navbarapp> -->
   <router-view></router-view>
 </template>
 

@@ -144,7 +144,7 @@ onUnmounted(() => {
                     class="dropdown-item text-white"
                     style="font-size: 13px"
                     href="/about"
-                    >SPD GROUP</a
+                    >SPD</a
                   >
                 </li>
                 <li>

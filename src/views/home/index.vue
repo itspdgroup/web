@@ -1,43 +1,70 @@
 <script setup>
-import imageA from "./../../../public/img/assets/satu.jpg";
-import imageB from "./../../../public/img/assets/dua.jpg";
-import imageC from "./../../../public/img/assets/tiga.jpg";
-import imageD from "./../../../public/img/assets/empat.jpg";
-import imageE from "./../../../public/img/assets/lima.jpg";
-import imageF from "./../../../public/img/assets/enam.jpg";
-import Gedung from "./../../../public/img/assets/gedung.jpg";
-import Kerja from "./../../../public/img/assets/kerja-laptop.jpg";
-import Portofolio from "./../../../public/img/assets/portofolio.jpg";
-const image = imageA;
-const image2 = imageB;
-const image3 = imageC;
-const image4 = imageD;
-const image5 = imageE;
-const image6 = imageF;
-const gedung = Gedung;
-const kerja = Kerja;
-const portofolio = Portofolio;
+import "./../../../public/css/swiper-bundle.min.css";
+import "./../../../public/js/swiper-bundle.min.js";
+import image from "./../../../public/img/assets/satu.jpg";
+import image2 from "./../../../public/img/assets/dua.jpg";
+import image3 from "./../../../public/img/assets/tiga.jpg";
+import image4 from "./../../../public/img/assets/empat.jpg";
+import image5 from "./../../../public/img/assets/lima.jpg";
+import image6 from "./../../../public/img/assets/enam.jpg";
+import gedung from "./../../../public/img/assets/gedung.jpg";
+import kerja from "./../../../public/img/assets/kerja-laptop.jpg";
+import portofolio from "./../../../public/img/assets/portofolio.jpg";
+import profile1 from "./../../../public/img/profile1.jpg";
+import profile2 from "./../../../public/img/profile2.jpg";
+import profile3 from "./../../../public/img/profile3.jpg";
+import profile4 from "./../../../public/img/profile4.jpg";
+import profile5 from "./../../../public/img/profile5.jpg";
+import profile6 from "./../../../public/img/profile6.jpg";
+import profile7 from "./../../../public/img/profile7.jpg";
+import profile8 from "./../../../public/img/profile8.jpg";
+import profile9 from "./../../../public/img/profile9.jpg";
+import logo_spd from "./../../../public/img/logo/spd.png";
+import logo_ssi from "./../../../public/img/logo/ssi.png";
+import logo_aii from "./../../../public/img/logo/aii.png";
+import logo_swatt from "./../../../public/img/logo/swatt.png";
+import logo_pusdiklat from "./../../../public/img/logo/pusdiklat.png";
+import logo_pusdiklat_swatt from "./../../../public/img/logo/pusdiklat_swatt.png";
 
 import { onMounted } from "vue";
-
-const handleIntersection = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const judul = document.querySelector(".judul");
-      judul.classList.add("animated");
-      observer.unobserve(entry.target);
-    }
-  });
-};
+// import Swiper from "swiper";
 
 onMounted(() => {
-  const options = {
-    threshold: 1, // Sesuaikan threshold sesuai kebutuhan
-  };
+  new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: "true",
+    fade: "true",
+    grabCursor: "true",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      waitForTransition: true,
+      enabled: true,
+    },
 
-  const observer = new IntersectionObserver(handleIntersection, options);
-  const judul = document.querySelector(".judul");
-  observer.observe(judul);
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      950: {
+        slidesPerView: 3,
+      },
+    },
+  });
 });
 </script>
 
@@ -76,7 +103,7 @@ onMounted(() => {
           <div
             class="box-shadow d-flex justify-content-center align-items-center px-4"
           >
-            <div class="isi-kotak container col-sm-6 text-center">
+            <div class="isi-kotak container col-md-6 text-center">
               <h1 class="text-white">LOYAL HANDAL MELAYANI</h1>
               <p class="text-white">
                 Tetap setia, tanggap, dan profesional dalam melayani kebutuhan
@@ -151,345 +178,241 @@ onMounted(() => {
     </div>
   </div>
 
-  <!-- Konten 1 -->
+  <!-- Card SPD GROPU -->
   <div class="container">
     <div class="d-flex justify-content-center mb-4">
       <div class="col-lg-6">
         <h1 class="judul">
           <span style="font-size: 33px">SELAMAT DATANG DI </span> <br />
           <span style="color: red; font-weight: 800">SPD</span>
-          <span style="font-weight: 800">GROUP</span>
+          <span style="font-weight: 800"> GROUP</span>
         </h1>
         <div class="border-judul"></div>
         <p class="text-judul">
           Kami adalah Perusahaan BUJP, sebuah entitas yang berdedikasi dalam
-          menyediakan solusi keamanan yang inovatif dan andal. Dengan fokus pada
-          keunggulan teknologi dan pelayanan pelanggan, kami memprioritaskan
-          keamanan Anda.
+          menyediakan solusi keamanan yang inovatif dan andal.
         </p>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-sm-4 mb-4">
-        <div class="d-flex justify-content-center">
-          <div class="card-satu">
-            <img :src="image4" class="card-img-top" alt="..." />
+    <div class="row m-0 p-0">
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card rounded-2 p-3 bg-logo border border-opacity-10">
+          <div style="position: absolute; bottom: 0; right: 0">
+            <a href="#">
+              <i
+                style="color: red"
+                class="fa-solid fa-arrow-right fa-sm p-3"
+              ></i>
+            </a>
           </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div style="width: 95%">
-            <h4 class="mt-3">BOOTSTRAP FRAMEWORK</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-              est.
+          <div class="card-body text-center">
+            <div class="d-flex justify-content-center" style="width: 100%">
+              <div class="cover-img-logo">
+                <img :src="logo_spd" alt="logo_spd" class="img-logo" />
+              </div>
+            </div>
+            <h5 class="card-subtitle mt-3 mb-2 text-body-secondary">
+              Security Phisik Dinamika
+            </h5>
+            <p class="text-logo m-0">
+              Merupakan usaha jasa pengamanan dan penyelamatan yang telah
+              beroprasi sejak tahun 1998.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-sm-4 mb-4">
-        <div class="d-flex justify-content-center">
-          <div class="card-satu">
-            <img :src="image5" class="card-img-top" alt="..." />
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card rounded-2 p-3 bg-logo border border-opacity-10">
+          <div style="position: absolute; bottom: 0; right: 0">
+            <a href="#">
+              <i
+                style="color: red"
+                class="fa-solid fa-arrow-right fa-sm p-3"
+              ></i>
+            </a>
           </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div style="width: 95%">
-            <h4 class="mt-3">BOOTSTRAP FRAMEWORK</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-              est.
+          <div class="card-body text-center">
+            <div class="d-flex justify-content-center" style="width: 100%">
+              <div class="cover-img-logo">
+                <img :src="logo_swatt" alt="logo_spd" class="img-logo" />
+              </div>
+            </div>
+            <h5 class="card-subtitle mt-3 mb-2 text-body-secondary">
+              Setia Waspada Tanggap & Tangguh
+            </h5>
+            <p class="text-logo m-0">
+              Merupakan usaha jasa pengamanan dan penyelamatan yang telah
+              beroprasi sejak tahun 1998.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-sm-4 mb-4">
-        <div class="d-flex justify-content-center">
-          <div class="card-satu">
-            <img :src="image6" class="card-img-top" alt="..." />
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card rounded-2 p-3 bg-logo border border-opacity-10">
+          <div style="position: absolute; bottom: 0; right: 0">
+            <a href="#">
+              <i
+                style="color: red"
+                class="fa-solid fa-arrow-right fa-sm p-3"
+              ></i>
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <div class="d-flex justify-content-center" style="width: 100%">
+              <div class="cover-img-logo">
+                <img :src="logo_ssi" alt="logo_spd" class="img-logo" />
+              </div>
+            </div>
+            <h5 class="card-subtitle mt-3 mb-2 text-body-secondary">
+              Security Sipil Indonesia
+            </h5>
+            <p class="text-logo m-0">
+              Merupakan usaha jasa pengamanan dan penyelamatan yang telah
+              beroprasi sejak tahun 1998.
+            </p>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
-          <div style="width: 95%">
-            <h4 class="mt-3">BOOTSTRAP FRAMEWORK</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-              est.
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card rounded-2 p-3 bg-logo border border-opacity-10">
+          <div style="position: absolute; bottom: 0; right: 0">
+            <a href="#">
+              <i
+                style="color: red"
+                class="fa-solid fa-arrow-right fa-sm p-3"
+              ></i>
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <div class="d-flex justify-content-center" style="width: 100%">
+              <div class="cover-img-logo">
+                <img :src="logo_aii" alt="logo_spd" class="img-logo" />
+              </div>
+            </div>
+            <h5 class="card-subtitle mt-3 mb-2 text-body-secondary">
+              Acsetama Insan Indonesia
+            </h5>
+            <p class="text-logo m-0">
+              Merupakan usaha jasa pengamanan dan penyelamatan yang telah
+              beroprasi sejak tahun 1998.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card rounded-2 p-3 bg-logo border border-opacity-10">
+          <div style="position: absolute; bottom: 0; right: 0">
+            <a href="#">
+              <i
+                style="color: red"
+                class="fa-solid fa-arrow-right fa-sm p-3"
+              ></i>
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <div class="d-flex justify-content-center" style="width: 100%">
+              <div class="cover-img-logo">
+                <img :src="logo_pusdiklat" alt="logo_spd" class="img-logo" />
+              </div>
+            </div>
+            <h5 class="card-subtitle mt-3 mb-2 text-body-secondary">
+              Pusdiklat SPD
+            </h5>
+            <p class="text-logo m-0">
+              Merupakan usaha jasa pengamanan dan penyelamatan yang telah
+              beroprasi sejak tahun 1998.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card rounded-2 p-3 bg-logo border border-opacity-10">
+          <div style="position: absolute; bottom: 0; right: 0">
+            <a href="#">
+              <i
+                style="color: red"
+                class="fa-solid fa-arrow-right fa-sm p-3"
+              ></i>
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <div class="d-flex justify-content-center" style="width: 100%">
+              <div class="cover-img-logo">
+                <img
+                  :src="logo_pusdiklat_swatt"
+                  alt="logo_spd"
+                  class="img-logo"
+                />
+              </div>
+            </div>
+            <h5 class="card-subtitle mt-3 mb-2 text-body-secondary">
+              Pusdiklat SWATT
+            </h5>
+            <p class="text-logo m-0">
+              Merupakan usaha jasa pengamanan dan penyelamatan yang telah
+              beroprasi sejak tahun 1998.
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Konten 2 -->
-  <!-- <div class="konten-2 mt-5">
-    <div style="margin: 0; padding: 0; position: absolute; width: 100%">
-      <div class="container mt-5">
-        <div class="container">
-          <div class="col-sm-5">
-            <h2>ABOUT US</h2>
-            <div class="border-judul-2"></div>
-            <p>
-              Aurona boasts clean and crispy design, bulletproof layout
-              consistency and intuitive navigation. The template was created by
-              top industry leaders in web design and user experience. Improve
-              your audience engagement and loyalty with simple and user friendly
-              tools offered by our template.
-            </p>
-            <div class="mt-4">
-              <div class="row">
-                <div class="col-sm-6 mt-4">
-                  <div class="row">
-                    <div class="col-2">
-                      <i class="fa-solid fa-award fa-2x" style="color: red"></i>
-                    </div>
-                    <div class="col-9">
-                      <h5>AWARD-WINNING DESIGNS</h5>
-                      <p>
-                        We are a team of dedicated interior design and
-                        remodeling professionals.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 mt-4">
-                  <div class="row">
-                    <div class="col-2">
-                      <i
-                        class="fa-solid fa-user-group fa-xl"
-                        style="color: red"
-                      ></i>
-                    </div>
-                    <div class="col-9">
-                      <h5>EXPERT TEAM</h5>
-                      <p>
-                        We are a team of dedicated interior design and
-                        remodeling professionals.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-sm-12 d-flex justify-content-between">
-                  <p class="mb-0">Dedication</p>
-                  <span class="ms-auto">100%</span>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      aria-label="Basic example"
-                      style="width: 100%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-                <div class="mt-3 col-sm-12 d-flex justify-content-between">
-                  <p class="mb-0">Knowledge</p>
-                  <span class="ms-auto">90%</span>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      aria-label="Basic example"
-                      style="width: 90%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-                <div class="mt-3 col-sm-12 d-flex justify-content-between">
-                  <p class="mb-0">Experience</p>
-                  <span class="ms-auto">80%</span>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      aria-label="Basic example"
-                      style="width: 80%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6" style="height: 120vh"></div>
-        <div class="col-sm-6 p-0">
-          <img :src="gedung" alt="" class="gedung" />
-        </div>
-      </div>
-    </div>
-    <div
-      class="row flex-lg-row-reverse mt-5 pb-4"
-      style="margin: 0; padding: 0; width: 100%; height: 100%"
-    >
-      <div class="col-sm-6">
-        <div class="container">
-          <h2 class="mt-3">WHY CHOOSE SPD GROUP</h2>
-          <div class="border-judul-2"></div>
-          <div class="row mt-5">
-            <div class="col-2">
-              <i class="fa-solid fa-rocket fa-2x" style="color: red"></i>
-            </div>
-            <div class="col-10">
-              <h5>MADE FOR PEOPLE</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, eius deserunt placeat incidunt sunt excepturi!
-              </p>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-2">
-              <i class="fa-solid fa-list-check fa-2x" style="color: red"></i>
-            </div>
-            <div class="col-10">
-              <h5>ADVANCED UI KIT</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, eius deserunt placeat incidunt sunt excepturi!
-              </p>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-2">
-              <i
-                class="fa-solid fa-square-caret-down fa-2x"
-                style="color: red"
-              ></i>
-            </div>
-            <div class="col-10">
-              <h5>RESPONSIVE & RETINA READY</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, eius deserunt placeat incidunt sunt excepturi!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-sm-6 mt-4 mb-4 d-flex justify-content-center align-items-center"
-      >
-        <img :src="kerja" alt="" width="80%" />
-      </div>
-    </div>
-  </div> -->
 
+  <!-- About Me -->
   <div class="konten-2 mt-5">
     <div class="row m-0 p-0">
-      <div class="col-sm-6 py-5">
+      <div class="col-md-6 py-5">
         <div class="container-hp">
           <div>
             <h2>ABOUT US</h2>
             <div class="border-judul-2"></div>
             <p>
-              Aurona boasts clean and crispy design, bulletproof layout
-              consistency and intuitive navigation. The template was created by
-              top industry leaders in web design and user experience. Improve
-              your audience engagement and loyalty with simple and user friendly
-              tools offered by our template.
+              Berawal dari Close Personal Protection (CPP), kini Panglima Ali
+              telah menyulap PT SPD menjadi SPD Group yang memiliki beberapa
+              anak perusahaan di antaranya PT Security Phisik Dinamika (SPD), PT
+              Security Waspada Tanggap dan Tangguh (SWATT) dan PT Security Sipil
+              Indonesia (SS1). Di bawah payung SPD Group inilah telah lahir
+              ribuan security handal dan profesional.
             </p>
             <div class="mt-4">
               <div class="row">
-                <div class="col-sm-6 mt-4">
+                <div class="col-md-6 mt-4">
                   <div class="row">
                     <div class="col-2">
                       <i class="fa-solid fa-award fa-2x" style="color: red"></i>
                     </div>
                     <div class="col-9">
-                      <h5>AWARD-WINNING DESIGNS</h5>
+                      <h5>PENGHARGAAN</h5>
                       <p>
-                        We are a team of dedicated interior design and
-                        remodeling professionals.
+                        Perusahaan kami bangga dengan banyaknya penghargaan yang
+                        kami raih dalam industri.
+                        <a href="#" style="color: red; text-decoration: none"
+                          >Selengkapnya
+                          <i class="fa-solid fa-arrow-right fa-xs"></i
+                        ></a>
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 mt-4">
+                <div class="col-md-6 mt-4">
                   <div class="row">
                     <div class="col-2">
                       <i
-                        class="fa-solid fa-user-group fa-xl"
+                        class="fa-solid fa-user-shield fa-xl"
                         style="color: red"
                       ></i>
                     </div>
                     <div class="col-9">
-                      <h5>EXPERT TEAM</h5>
+                      <h5>TIM AHLI</h5>
                       <p>
-                        We are a team of dedicated interior design and
-                        remodeling professionals.
+                        Bertekad melayani pengguna jasa kami secara profesional
+                        dan berkesinambungan.
+                        <a href="#" style="color: red; text-decoration: none"
+                          >Selengkapnya
+                          <i class="fa-solid fa-arrow-right fa-xs"></i
+                        ></a>
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-sm-12 d-flex justify-content-between">
-                  <p class="mb-0">Dedication</p>
-                  <span class="ms-auto">100%</span>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      aria-label="Basic example"
-                      style="width: 100%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-                <div class="mt-3 col-sm-12 d-flex justify-content-between">
-                  <p class="mb-0">Knowledge</p>
-                  <span class="ms-auto">90%</span>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      aria-label="Basic example"
-                      style="width: 90%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-                <div class="mt-3 col-sm-12 d-flex justify-content-between">
-                  <p class="mb-0">Experience</p>
-                  <span class="ms-auto">80%</span>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      aria-label="Basic example"
-                      style="width: 80%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
                   </div>
                 </div>
               </div>
@@ -497,7 +420,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="col-sm-6 m-0 p-0">
+      <div class="col-md-6 m-0 p-0">
         <img :src="gedung" alt="" class="gedung" />
       </div>
     </div>
@@ -507,7 +430,7 @@ onMounted(() => {
         class="row flex-lg-row-reverse mt-5 pb-4"
         style="margin: 0; padding: 0; width: 100%; height: 100%"
       >
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <div class="container">
             <h2 class="mt-3">WHY CHOSE SPD GROUP</h2>
             <div class="border-judul-2"></div>
@@ -553,9 +476,19 @@ onMounted(() => {
           </div>
         </div>
         <div
-          class="col-sm-6 mt-4 mb-4 d-flex justify-content-center align-items-center"
+          class="col-md-6 mt-4 mb-4 d-flex justify-content-center align-items-center"
         >
-          <img :src="kerja" alt="" width="100%" />
+          <iframe
+            class="rounded-2"
+            width="90%"
+            height="90%"
+            src="https://www.youtube.com/embed/EcBqBUjt5Ew"
+            title="SPD on Program Soci@lite"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -565,7 +498,7 @@ onMounted(() => {
   <div class="konten-3">
     <div class="container">
       <div class="row m-0 pt-5 pb-5">
-        <div class="col-sm-10">
+        <div class="col-md-10">
           <div class="text-k3">
             <h3 class="text-white">
               <b>SPD GROUP</b>
@@ -579,7 +512,7 @@ onMounted(() => {
             </p>
           </div>
         </div>
-        <div class="col-sm-2 d-flex justify-content-center align-items-center">
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
           <div>
             <button class="btn btn-outline-light rounded-0">ORDER NOW</button>
           </div>
@@ -587,8 +520,128 @@ onMounted(() => {
       </div>
     </div>
   </div>
+
+  <!-- Our Service -->
+  <div class="konten-2 pb-5">
+    <!-- Judul -->
+    <div class="container">
+      <div class="d-flex justify-content-center mb-2">
+        <div class="col-lg-6">
+          <h2 class="judul-2">OUR SERVICE</h2>
+          <div class="border-judul"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Isi Konten -->
+    <div class="container body">
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide rounded-2">
+              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <div class="card-body text-center">
+                <h5 class="card-title mb-3">Physical Service</h5>
+                <p class="card-text mb-3">
+                  PT Security Phisik Dinamika merupakan jasa pengamanan dan
+                  penyelamatan yang telah memiliki izin usaha operasional resmi.
+                </p>
+                <a href="#" class="btn btn-danger btn-sm mb-3">Selengkapnya</a>
+              </div>
+            </div>
+            <div class="card swiper-slide rounded-2">
+              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <div class="card-body text-center">
+                <h5 class="card-title mb-3">Close Personal Protection</h5>
+                <p class="card-text mb-3">
+                  SPD Group di tahun 2011 telah memulai Diklatsus (Pendidikan
+                  Latihan Khusus) Executif Protection
+                </p>
+                <a href="#" class="btn btn-danger btn-sm mb-3">Selengkapnya</a>
+              </div>
+            </div>
+            <div class="card swiper-slide rounded-2">
+              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <div class="card-body text-center">
+                <h5 class="card-title mb-3">Security Investigation</h5>
+                <p class="card-text mb-3">
+                  PT Security Phisik Dinamika merupakan jasa pengamanan dan
+                  penyelamatan yang telah memiliki izin usaha operasional resmi.
+                </p>
+                <a href="#" class="btn btn-danger btn-sm mb-3">Selengkapnya</a>
+              </div>
+            </div>
+            <div class="card swiper-slide rounded-2">
+              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <div class="card-body text-center">
+                <h5 class="card-title mb-3">Training & Education Service</h5>
+                <p class="card-text mb-3">
+                  Pusat Pendidikan dan Pelatihan SPD merupakan salah satu
+                  lembaga pendidikan di bawah naungan SPD Group.
+                </p>
+                <a href="#" class="btn btn-danger btn-sm mb-3">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product & Service -->
+  <div class="konten-4" style="margin-bottom: 5px">
+    <div class="container">
+      <div class="d-flex justify-content-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="judul-2">PRODUCT & SYSTEM</h2>
+          <div class="border-judul"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container pb-5">
+      <div class="row m-0 p-0">
+        <div class="col-md-4 col-6 mb-5 d-flex justify-content-center">
+          <div class="card text-center border-0">
+            <div
+              class="border rounded-circle d-flex justify-content-center align-items-center bg-product text-white"
+              style="width: 7rem; height: 7rem"
+            >
+              <i class="fa-solid fa-square-parking fa-3x"></i>
+            </div>
+            <h5 class="mt-2">SPD Parking</h5>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-5 d-flex justify-content-center">
+          <div class="card text-center border-0">
+            <div
+              class="border rounded-circle d-flex justify-content-center align-items-center bg-product text-white"
+              style="width: 7rem; height: 7rem"
+            >
+              <i class="fa-solid fa-hand-sparkles fa-3x"></i>
+            </div>
+            <h5 class="mt-2">SPD Cleaning</h5>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-5 d-flex justify-content-center">
+          <div class="card text-center border-0">
+            <div
+              class="border rounded-circle d-flex justify-content-center align-items-center bg-product text-white"
+              style="width: 7rem; height: 7rem"
+            >
+              <i class="fa-solid fa-walkie-talkie fa-3x"></i>
+            </div>
+            <h5 class="mt-2">Handy Talkie</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Konten 4 -->
-  <div class="konten-4">
+  <!-- <div class="konten-4">
     <div class="container">
       <div class="d-flex justify-content-center mb-4">
         <div class="col-lg-6">
@@ -597,7 +650,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="row justify-content-center pt-4">
-        <div class="col-sm-4 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="d-flex justify-content-center">
             <div
               class="link-card d-flex justify-content-center align-items-center"
@@ -609,7 +662,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="col-sm-4 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="d-flex justify-content-center">
             <div
               class="link-card d-flex justify-content-center align-items-center"
@@ -621,7 +674,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="col-sm-4 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="d-flex justify-content-center">
             <div
               class="link-card d-flex justify-content-center align-items-center"
@@ -633,7 +686,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="col-sm-4 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="d-flex justify-content-center">
             <div
               class="link-card d-flex justify-content-center align-items-center"
@@ -645,7 +698,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="col-sm-4 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="d-flex justify-content-center">
             <div
               class="link-card d-flex justify-content-center align-items-center"
@@ -659,88 +712,13 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
-  <!-- Konten 5 -->
-  <div class="konten-2 mt-2 pb-4">
-    <div class="container">
-      <div class="d-flex justify-content-center mb-4">
-        <div class="col-lg-6">
-          <h2 class="judul-2">OUR WORKING PROCESS</h2>
-          <div class="border-judul"></div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="row mt-2 pb-4"
-      style="margin: 0; padding: 0; width: 100%; height: 100%"
-    >
-      <div
-        class="col-sm-6 mt-4 mb-4 d-flex justify-content-center align-items-center"
-      >
-        <img :src="kerja" alt="" width="90%" />
-      </div>
-      <div class="col-sm-6">
-        <div class="container">
-          <div class="row mt-4">
-            <div class="col-3">
-              <button
-                class="btn btn-danger btl-lg rounded-circle"
-                style="width: 5rem; height: 5rem"
-              >
-                <i class="fa-solid fa-rocket fa-2x"></i>
-              </button>
-            </div>
-            <div class="col-9">
-              <h5>MADE FOR PEOPLE</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, eius deserunt placeat incidunt sunt excepturi!
-              </p>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-3">
-              <button
-                class="btn btn-danger btl-lg rounded-circle"
-                style="width: 5rem; height: 5rem"
-              >
-                <i class="fa-solid fa-list-check fa-2x"></i>
-              </button>
-            </div>
-            <div class="col-9">
-              <h5>ADVANCED UI KIT</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, eius deserunt placeat incidunt sunt excepturi!
-              </p>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-3">
-              <button
-                class="btn btn-danger btl-lg rounded-circle"
-                style="width: 5rem; height: 5rem"
-              >
-                <i class="fa-solid fa-square-caret-down fa-2x"></i>
-              </button>
-            </div>
-            <div class="col-9">
-              <h5>RESPONSIVE & RETINA READY</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, eius deserunt placeat incidunt sunt excepturi!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div> -->
+
   <!-- Konten 6 -->
   <div class="konten-6">
     <div class="container">
       <div class="row m-0 pt-5 pb-5">
-        <div class="col-sm-10">
+        <div class="col-md-10">
           <div class="text-k3">
             <h3 class="text-white">
               <b>SPD GROUP</b>
@@ -754,7 +732,7 @@ onMounted(() => {
             </p>
           </div>
         </div>
-        <div class="col-sm-2 d-flex justify-content-center align-items-center">
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
           <div>
             <button class="btn btn-outline-light rounded-0">ORDER NOW</button>
           </div>
@@ -762,17 +740,299 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <!-- Konten 7 -->
-  <div class="konten-2 mt-2 pb-4">
+
+  <!-- News & Blog -->
+  <div class="konten-4" style="margin-bottom: 5px">
     <div class="container">
-      <div class="d-flex justify-content-center mb-4">
+      <div class="d-flex justify-content-center mb-5">
         <div class="col-lg-6">
-          <h2 class="judul-2">OUR SERVICE</h2>
+          <h2 class="judul-2">News & Blog</h2>
           <div class="border-judul"></div>
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row m-0 p-0">
+        <div class="col-md-6">
+          <div style="width: 100%; height: 100vh"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-3 rounded-2" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <div style="width: 100%; height: 100%">
+                  <img
+                    :src="portofolio"
+                    class="img-blog rounded-1"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 rounded-2" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <div style="width: 100%; height: 100%">
+                  <img
+                    :src="logo_spd"
+                    class="img-blog rounded-1"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 rounded-2" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <div style="width: 100%; height: 100%">
+                  <img
+                    :src="portofolio"
+                    class="img-blog rounded-1"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- Card -->
+  <!-- <div class="body">
+    <div class="slide-container swiper">
+      <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile1" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile2" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile3" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile4" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile5" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile6" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile7" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile8" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img :src="profile9" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div> -->
+
   <div class="mt-5"></div>
 </template>
 
@@ -808,7 +1068,7 @@ p {
 .box-shadow {
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
 }
 
@@ -1005,7 +1265,7 @@ p {
 @media (min-width: 992px) {
   .gedung {
     width: 100%;
-    height: 120vh;
+    height: 85vh;
     object-fit: cover;
     object-position: center center;
   }
@@ -1031,5 +1291,153 @@ p {
     text-align: left;
     margin-bottom: 0;
   }
+}
+
+/* Card */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+}
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  border-radius: 25px 25px 0 25px;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid red;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: red;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #265df2;
+}
+
+.swiper-navBtn {
+  color: red;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: red;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination-bullet {
+  background-color: red;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
+
+.cover-img-logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.img-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bg-logo {
+  background-color: #f8f8f8;
+  transition: margin-top 0.5s ease, box-shadow 0.5s ease;
+}
+
+.bg-logo:hover {
+  background-color: white;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 40px 2px rgba(15, 15, 15, 0.2);
+}
+
+.bg-product {
+  background-color: red;
+}
+
+.img-blog {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
