@@ -1,30 +1,35 @@
 <script setup>
 import "./../../../public/css/swiper-bundle.min.css";
 import "./../../../public/js/swiper-bundle.min.js";
-import image from "./../../../public/img/assets/satu.jpg";
+
+import icon from "./../../../public/img/logo/icon.png";
+import font_hitam from "./../../../public/font/font-hitam.png";
+import font_putih from "./../../../public/font/font-putih.png";
+import service1 from "./../../../public/img/assets/service1.jpg";
+import service2 from "./../../../public/img/assets/service2.jpg";
+import service3 from "./../../../public/img/assets/service3.jpg";
+import service4 from "./../../../public/img/assets/service4.jpg";
+import image from "./../../../public/img/assets/image1.jpg";
 import image2 from "./../../../public/img/assets/dua.jpg";
-import image3 from "./../../../public/img/assets/tiga.jpg";
+import image3 from "./../../../public/img/assets/image3.jpg";
 import image4 from "./../../../public/img/assets/empat.jpg";
-import image5 from "./../../../public/img/assets/lima.jpg";
-import image6 from "./../../../public/img/assets/enam.jpg";
 import gedung from "./../../../public/img/assets/gedung.jpg";
-import kerja from "./../../../public/img/assets/kerja-laptop.jpg";
 import portofolio from "./../../../public/img/assets/portofolio.jpg";
-import profile1 from "./../../../public/img/profile1.jpg";
-import profile2 from "./../../../public/img/profile2.jpg";
-import profile3 from "./../../../public/img/profile3.jpg";
-import profile4 from "./../../../public/img/profile4.jpg";
-import profile5 from "./../../../public/img/profile5.jpg";
-import profile6 from "./../../../public/img/profile6.jpg";
-import profile7 from "./../../../public/img/profile7.jpg";
-import profile8 from "./../../../public/img/profile8.jpg";
-import profile9 from "./../../../public/img/profile9.jpg";
 import logo_spd from "./../../../public/img/logo/spd.png";
 import logo_ssi from "./../../../public/img/logo/ssi.png";
 import logo_aii from "./../../../public/img/logo/aii.png";
 import logo_swatt from "./../../../public/img/logo/swatt.png";
 import logo_pusdiklat from "./../../../public/img/logo/pusdiklat.png";
 import logo_pusdiklat_swatt from "./../../../public/img/logo/pusdiklat_swatt.png";
+
+import client1 from "./../../../public/img/client/sakura.png";
+import client2 from "./../../../public/img/client/siemens.png";
+import client3 from "./../../../public/img/client/siemens_energi.png";
+import client4 from "./../../../public/img/client/ccm.png";
+import client5 from "./../../../public/img/client/jugleland.jpeg";
+import client6 from "./../../../public/img/client/logoSentulKecil.png";
+import client7 from "./../../../public/img/client/Pearl-Garden-Logo.png";
+import client8 from "./../../../public/img/client/pakuwon.png";
 
 import { onMounted } from "vue";
 // import Swiper from "swiper";
@@ -104,11 +109,7 @@ onMounted(() => {
             class="box-shadow d-flex justify-content-center align-items-center px-4"
           >
             <div class="isi-kotak container col-md-6 text-center">
-              <h1 class="text-white">LOYAL HANDAL MELAYANI</h1>
-              <p class="text-white">
-                Tetap setia, tanggap, dan profesional dalam melayani kebutuhan
-                Anda dengan kehandalan terpercaya.
-              </p>
+              <h1 class="text-white">LOYAL HANDAL MELAYANI PROFESIONAL DAN BERTANGGUNG JAWAB</h1>
               <div class="mt-4">
                 <a
                   href=""
@@ -183,9 +184,16 @@ onMounted(() => {
     <div class="d-flex justify-content-center mb-4">
       <div class="col-lg-6">
         <h1 class="judul">
-          <span style="font-size: 33px">SELAMAT DATANG DI </span> <br />
-          <span style="color: red; font-weight: 800">SPD</span>
-          <span style="font-weight: 800"> GROUP</span>
+          <span style="font-size: 33px; font-weight: 100"
+            >SELAMAT DATANG DI
+          </span>
+          <br />
+          <img
+            :src="font_hitam"
+            alt="spd-font"
+            height="38rem"
+            style="margin-top: -1rem"
+          />
         </h1>
         <div class="border-judul"></div>
         <p class="text-judul">
@@ -425,51 +433,62 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="container">
+    <div class="container pb-5">
       <div
         class="row flex-lg-row-reverse mt-5 pb-4"
         style="margin: 0; padding: 0; width: 100%; height: 100%"
       >
         <div class="col-md-6">
           <div class="container">
-            <h2 class="mt-3">WHY CHOSE SPD GROUP</h2>
+            <h2 class="mt-3">WHY SPD GROUP</h2>
             <div class="border-judul-2"></div>
-            <div class="row mt-5">
-              <div class="col-2">
-                <i class="fa-solid fa-rocket fa-2x" style="color: red"></i>
-              </div>
-              <div class="col-10">
-                <h5>MADE FOR PEOPLE</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus, eius deserunt placeat incidunt sunt excepturi!
-                </p>
-              </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col-2">
-                <i class="fa-solid fa-list-check fa-2x" style="color: red"></i>
-              </div>
-              <div class="col-10">
-                <h5>ADVANCED UI KIT</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus, eius deserunt placeat incidunt sunt excepturi!
-                </p>
-              </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col-2">
+            <div class="d-flex">
+              <div style="margin: 10px 20px 0 0; width: 25px">
                 <i
-                  class="fa-solid fa-square-caret-down fa-2x"
+                  class="fa-solid fa-building-shield fa-xl"
                   style="color: red"
                 ></i>
               </div>
-              <div class="col-10">
-                <h5>RESPONSIVE & RETINA READY</h5>
+              <div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus, eius deserunt placeat incidunt sunt excepturi!
+                  Telah berdiri selama 25 tahun lebih dengan sertifikat resmi
+                  dari Kepolisian dan Asosiasi BUJP.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div style="margin: 10px 20px 0 0; width: 25px">
+                <i class="fa-solid fa-warehouse fa-xl" style="color: red"></i>
+              </div>
+              <div>
+                <p>
+                  Memilik PUSDIKLAT dengan sarana prasarana lengkap yang
+                  menunjang kompetensi satpam/security.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div style="margin: 10px 20px 0 0; width: 25px">
+                <i class="fa-solid fa-user-shield fa-xl" style="color: red"></i>
+              </div>
+              <div>
+                <p>
+                  pelatih berpengalaman dan bersertifikat di bidang BUJP dengan
+                  ribuan anggota aktif.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div style="margin: 10px 20px 0 0; width: 25px">
+                <i
+                  class="fa-solid fa-walkie-talkie fa-xl"
+                  style="color: red"
+                ></i>
+              </div>
+              <div>
+                <p>
+                  Peralatan komunikasi antar anggota dan wilayah menggunakan
+                  teknologi canggih dan modern seperti HT dengan teknologi POC.
                 </p>
               </div>
             </div>
@@ -494,33 +513,47 @@ onMounted(() => {
     </div>
   </div>
 
-  <!-- Kinten 3 -->
+  <!-- Konten 3 -->
   <div class="konten-3">
     <div class="container">
       <div class="row m-0 pt-5 pb-5">
-        <div class="col-md-10">
+        <div class="col-md-7">
           <div class="text-k3">
-            <h3 class="text-white">
-              <b>SPD GROUP</b>
+            <div>
+              <img
+                :src="font_putih"
+                alt="font-spd"
+                height="38px"
+                style="margin-left: -5px"
+              />
+            </div>
+            <h3
+              class="text-white mt-3"
+              style="font-weight: 100; font-size: 25px; line-height: 40px"
+            >
+              LOYAL HANDAL MELAYANI PROFESIONAL DAN BERTANGGUNG JAWAB
             </h3>
-            <h3 class="text-white">
-              IS A PERFECT WEB DESIGN SOLUTION FOR EVERYBODY
-            </h3>
-            <p class="mt-3 text-white">
-              Become the owner of the best solution for creating your own
-              website!
-            </p>
           </div>
         </div>
-        <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <div class="col-md-5 d-flex justify-content-center align-items-center">
           <div>
-            <button class="btn btn-outline-light rounded-0">ORDER NOW</button>
+            <a href="" class="text-white m-2 m-md-4">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </a>
+            <a href="" class="text-white m-2 m-md-4">
+              <i class="fa-brands fa-youtube fa-xl"></i>
+            </a>
+            <a href="" class="text-white m-2 m-md-4">
+              <i class="fa-brands fa-facebook fa-xl"></i>
+            </a>
+            <a href="" class="text-white m-2 m-md-4">
+              <i class="fa-brands fa-x-twitter fa-xl"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Our Service -->
   <div class="konten-2 pb-5">
     <!-- Judul -->
@@ -538,7 +571,7 @@ onMounted(() => {
         <div class="slide-content">
           <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide rounded-2">
-              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <img :src="service1" class="card-img-top" alt="portofolio" />
               <div class="card-body text-center">
                 <h5 class="card-title mb-3">Physical Service</h5>
                 <p class="card-text mb-3">
@@ -549,7 +582,7 @@ onMounted(() => {
               </div>
             </div>
             <div class="card swiper-slide rounded-2">
-              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <img :src="service2" class="card-img-top" alt="portofolio" />
               <div class="card-body text-center">
                 <h5 class="card-title mb-3">Close Personal Protection</h5>
                 <p class="card-text mb-3">
@@ -560,7 +593,7 @@ onMounted(() => {
               </div>
             </div>
             <div class="card swiper-slide rounded-2">
-              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <img :src="service3" class="card-img-top" alt="portofolio" />
               <div class="card-body text-center">
                 <h5 class="card-title mb-3">Security Investigation</h5>
                 <p class="card-text mb-3">
@@ -571,7 +604,7 @@ onMounted(() => {
               </div>
             </div>
             <div class="card swiper-slide rounded-2">
-              <img :src="portofolio" class="card-img-top" alt="portofolio" />
+              <img :src="service4" class="card-img-top" alt="portofolio" />
               <div class="card-body text-center">
                 <h5 class="card-title mb-3">Training & Education Service</h5>
                 <p class="card-text mb-3">
@@ -640,101 +673,38 @@ onMounted(() => {
     </div>
   </div>
 
-  <!-- Konten 4 -->
-  <!-- <div class="konten-4">
-    <div class="container">
-      <div class="d-flex justify-content-center mb-4">
-        <div class="col-lg-6">
-          <h2 class="judul-2">PORTFOLIO</h2>
-          <div class="border-judul"></div>
-        </div>
-      </div>
-      <div class="row justify-content-center pt-4">
-        <div class="col-md-4 mb-3">
-          <div class="d-flex justify-content-center">
-            <div
-              class="link-card d-flex justify-content-center align-items-center"
-            >
-              <button class="btn btn-outline-light rounded-0">Link</button>
-            </div>
-            <div class="card-dua">
-              <img :src="portofolio" class="card-img-top" alt="..." />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="d-flex justify-content-center">
-            <div
-              class="link-card d-flex justify-content-center align-items-center"
-            >
-              <button class="btn btn-outline-light rounded-0">Link</button>
-            </div>
-            <div class="card-dua">
-              <img :src="portofolio" class="card-img-top" alt="..." />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="d-flex justify-content-center">
-            <div
-              class="link-card d-flex justify-content-center align-items-center"
-            >
-              <button class="btn btn-outline-light rounded-0">Link</button>
-            </div>
-            <div class="card-dua">
-              <img :src="portofolio" class="card-img-top" alt="..." />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="d-flex justify-content-center">
-            <div
-              class="link-card d-flex justify-content-center align-items-center"
-            >
-              <button class="btn btn-outline-light rounded-0">Link</button>
-            </div>
-            <div class="card-dua">
-              <img :src="portofolio" class="card-img-top" alt="..." />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="d-flex justify-content-center">
-            <div
-              class="link-card d-flex justify-content-center align-items-center"
-            >
-              <button class="btn btn-outline-light rounded-0">Link</button>
-            </div>
-            <div class="card-dua">
-              <img :src="portofolio" class="card-img-top" alt="..." />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <!-- Konten 6 -->
   <div class="konten-6">
     <div class="container">
       <div class="row m-0 pt-5 pb-5">
-        <div class="col-md-10">
+        <div class="col-md-7">
           <div class="text-k3">
             <h3 class="text-white">
               <b>SPD GROUP</b>
             </h3>
-            <h3 class="text-white">
-              IS A PERFECT WEB DESIGN SOLUTION FOR EVERYBODY
-            </h3>
             <p class="mt-3 text-white">
-              Become the owner of the best solution for creating your own
-              website!
+              Terus maju dan berkomitmen menjadi bagian dari Aset Bangsa dan
+              Negara di dalam mengembangkan Mental Manusia sutuhnya khususnya di
+              bidang Industri Jasa Pengamanan
             </p>
           </div>
         </div>
-        <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <div class="col-md-5 d-flex justify-content-center align-items-center">
           <div>
-            <button class="btn btn-outline-light rounded-0">ORDER NOW</button>
+            <div>
+              <a href="" class="text-white m-2 m-md-4">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
+              <a href="" class="text-white m-2 m-md-4">
+                <i class="fa-brands fa-youtube fa-xl"></i>
+              </a>
+              <a href="" class="text-white m-2 m-md-4">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+              </a>
+              <a href="" class="text-white m-2 m-md-4">
+                <i class="fa-brands fa-x-twitter fa-xl"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -746,26 +716,44 @@ onMounted(() => {
     <div class="container">
       <div class="d-flex justify-content-center mb-5">
         <div class="col-lg-6">
-          <h2 class="judul-2">News & Blog</h2>
+          <h2 class="judul-2">NEWS & BLOG</h2>
           <div class="border-judul"></div>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row m-0 p-0">
-        <div class="col-md-6">
-          <div style="width: 100%; height: 100vh"></div>
+        <div class="col-md-6 mb-3 d-flex align-items-stretch">
+          <div class="rounded-2" style="position: relative">
+            <div style="position: absolute; bottom: 10px" class="card-news">
+              <div class="container">
+                <div class="col-md-8">
+                  <div class="card rounded-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">
+                        Card subtitle
+                      </h6>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img :src="image4" class="img-news rounded-1" alt="..." />
+          </div>
         </div>
         <div class="col-md-6">
           <div class="card mb-3 rounded-2" style="max-width: 540px">
             <div class="row g-0">
               <div class="col-md-4">
                 <div style="width: 100%; height: 100%">
-                  <img
-                    :src="portofolio"
-                    class="img-blog rounded-1"
-                    alt="..."
-                  />
+                  <img :src="portofolio" class="img-blog rounded-1" alt="..." />
                 </div>
               </div>
               <div class="col-md-8">
@@ -787,11 +775,7 @@ onMounted(() => {
             <div class="row g-0">
               <div class="col-md-4">
                 <div style="width: 100%; height: 100%">
-                  <img
-                    :src="logo_spd"
-                    class="img-blog rounded-1"
-                    alt="..."
-                  />
+                  <img :src="portofolio" class="img-blog rounded-1" alt="..." />
                 </div>
               </div>
               <div class="col-md-8">
@@ -813,11 +797,7 @@ onMounted(() => {
             <div class="row g-0">
               <div class="col-md-4">
                 <div style="width: 100%; height: 100%">
-                  <img
-                    :src="portofolio"
-                    class="img-blog rounded-1"
-                    alt="..."
-                  />
+                  <img :src="portofolio" class="img-blog rounded-1" alt="..." />
                 </div>
               </div>
               <div class="col-md-8">
@@ -839,201 +819,253 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <!-- Card -->
-  <!-- <div class="body">
-    <div class="slide-container swiper">
-      <div class="slide-content">
-        <div class="card-wrapper swiper-wrapper">
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
 
-              <div class="card-image">
-                <img :src="profile1" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+  <!-- Our Client -->
+  <div class="konten-4" style="margin-bottom: 5px">
+    <div class="container">
+      <div class="d-flex justify-content-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="judul-2">OUR CLIENT</h2>
+          <div class="border-judul"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container pb-5">
+      <div class="row m-0 p-0">
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client1" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile2" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client2" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile3" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client3" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile4" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client4" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile5" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client5" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile6" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client6" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile7" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client7" alt="">
             </div>
           </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile8" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img :src="profile9" alt="" class="card-img" />
-              </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">
-                The lorem text the section that contains header with having open
-                functionality. Lorem dolor sit amet consectetur adipisicing
-                elit.
-              </p>
-
-              <button class="button">View More</button>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0" style="height: 8rem">
+            <div class="p-2" style="width: 100%; height: 100%;">
+              <img style="width: 100%; height: 100%; object-fit: contain; object-position: center center;" :src="client8" alt="">
             </div>
           </div>
         </div>
       </div>
-
-      <div class="swiper-button-next swiper-navBtn"></div>
-      <div class="swiper-button-prev swiper-navBtn"></div>
-      <div class="swiper-pagination"></div>
     </div>
-  </div> -->
+  </div>
 
-  <div class="mt-5"></div>
+  <!-- Contact Us -->
+  <div class="konten-2 mt-5">
+    <div class="row m-0 p-0">
+      <div class="col-md-6 m-0 p-0">
+        <img :src="gedung" alt="" class="img-contact" />
+      </div>
+      <div class="col-md-6 py-5">
+        <div class="container">
+          <div class="col-12 col-md-10 m-0 ms-md-3">
+            <h2>PROTECT YOUR LOCATION</h2>
+            <div class="border-judul-2"></div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="exampleFormControlInput1"
+                placeholder="Name"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Phone</label
+              >
+              <input
+                type="email"
+                class="form-control mb-3"
+                id="exampleFormControlInput1"
+                placeholder="( ex : +62834xxxxxxx )"
+              />
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control mb-3"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Example textarea</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <button
+              class="btn btn-danger rounded-1 mt-2"
+              style="width: 8rem; background-color: red"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="background-color: red; width: 100%">
+    <div class="container">
+      <div class="row m-0 p-0 pt-4 pt-md-5 text-white">
+        <div class="col-md-3 mb-3 d-3lex justify-content-md-center">
+          <div class="text-center">
+            <img :src="icon" alt="spd-group" width="60%" style="margin: 0" />
+            <h3 class="mb-1">SPD GROUP</h3>
+            <div class="d-flex justify-content-center">
+              <h6 style="font-weight: 100; width: 90%">
+                Loyal Handal Melayani Profesional dan Bertanggung Jawab
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 p-3 d-flex justify-content-md-center">
+          <div>
+            <h5>PUSKOTAMA SPD GROUP</h5>
+            <h6 style="font-weight: 100">
+              Jl. Margasatwa Barat No. 45 Jagakarsa Cilandak - Jakarta Selatan
+            </h6>
+            <h6>
+              <i class="fa-solid fa-phone" style="margin-right: 10px"></i>
+              021 7884 4918
+            </h6>
+            <h5 class="mt-4">MARKAS KOMANDO SPD</h5>
+            <h6 style="font-weight: 100">
+              Jl. Bina Marga No. 30 Desa Senja Citerup - Bogor
+            </h6>
+            <h6>
+              <i class="fa-solid fa-phone" style="margin-right: 10px"></i>
+              021 7884 4918
+            </h6>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 p-3 d-flex justify-content-md-center">
+          <div>
+            <h5>QUICK LINK</h5>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                FAQ
+              </a>
+            </div>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                Contact Us
+              </a>
+            </div>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                Career
+              </a>
+            </div>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                Sitemap
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3 p-3 d-flex justify-content-md-center">
+          <div>
+            <h5>KEEP IN TOUCH</h5>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                <i class="fa-brands fa-instagram"></i>
+                @korpsspd
+              </a>
+            </div>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                <i class="fa-brands fa-youtube"></i>
+                SPDTV INDONESIA
+              </a>
+            </div>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                <i class="fa-brands fa-facebook"></i>
+                SPD GROUP
+              </a>
+            </div>
+            <div class="mb-1">
+              <a href="" class="text-white" style="text-decoration: none">
+                <i class="fa-brands fa-x-twitter"></i>
+                SPD GROUP
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <iframe
+          class="rounded-2"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6409475383316!2d106.80970437409759!3d-6.310811061756694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ee08d4510147%3A0x9826cdf81c4976ca!2sPUSKOTAMA%20SPD%20GROUP%20(PUSAT%20KOMANDO%20UTAMA)!5e0!3m2!1sen!2sid!4v1715154623248!5m2!1sen!2sid"
+          width="100%"
+          height="250"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="row m-0 p-0 mt-3 text-center text-white">
+        <hr style="background-color: white !important; color: white" />
+        <p style="font-size: 12px">
+          <i class="fa-regular fa-copyright" style="margin-right: 7px"></i>2024
+          SPD GROUP
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>
@@ -1262,10 +1294,42 @@ p {
   object-position: center center;
 }
 
+.img-contact {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.img-news {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.card-news {
+  width: 100%;
+}
+
 @media (min-width: 992px) {
   .gedung {
     width: 100%;
     height: 85vh;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .img-contact {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .img-news {
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
     object-position: center center;
   }

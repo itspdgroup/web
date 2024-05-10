@@ -6,7 +6,7 @@ import imageD from "./../public/img/assets/empat.jpg";
 import imageE from "./../public/img/assets/lima.jpg";
 import imageF from "./../public/img/assets/enam.jpg";
 import Gedung from "./../public/img/assets/gedung.jpg";
-import Kerja from "./../public/img/assets/kerja-laptop.jpg";
+
 import Portofolio from "./../public/img/assets/portofolio.jpg";
 const image = imageA;
 const image2 = imageB;
@@ -15,7 +15,6 @@ const image4 = imageD;
 const image5 = imageE;
 const image6 = imageF;
 const gedung = Gedung;
-const kerja = Kerja;
 const portofolio = Portofolio;
 
 import { ref, onMounted, onUnmounted } from "vue";

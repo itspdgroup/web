@@ -1,5 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import font_putih from "./../../public/font/font-putih.png";
+import font_hitam from "./../../public/font/font-hitam.png";
 
 const isScrolled = ref(false);
 
@@ -93,10 +95,8 @@ onUnmounted(() => {
     >
       <div class="container">
         <a class="navbar-brand" href="#">
-          <b
-            ><span style="color: red; font-weight: 700">SPD</span>
-            <span class="icon-spd" style="color: white"> GROUP</span></b
-          >
+          <img v-if="!isScrolled" :src="font_putih" alt="" height="20px" style="margin-top: -5px;">
+          <img v-else :src="font_hitam" alt="" height="20px" style="margin-top: -5px;">
         </a>
         <button
           class="navbar-toggler border-0 rounded-0 shadow-sm"
